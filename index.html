@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Etch a Sketch</title>
+        <script src="script.js" defer></script>
+        <style>
+            body {
+                text-align: center;
+            }
+            #size {
+                margin-bottom: 10px;
+                padding: auto;
+            }
+            
+            .container {
+                display: grid;
+                margin: auto;
+                width: 500px;
+                height: 500px;
+                box-sizing: border-box;
+            }
+            .gridsquare {
+                border-left: 2px;
+                border-width: 2px;
+                border-style: solid;
+                border-color: black;
+            }
+            .gridsquare:hover {
+                background-color: blue;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Etch a Sketch</h1>
+        <form type="number">
+        <button type="submit" id="size">Change size</button>
+        </form>
+        <div class="container" id="square"></div>
+    </body>
+</html>
