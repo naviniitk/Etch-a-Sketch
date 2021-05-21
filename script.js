@@ -16,7 +16,7 @@ let button = document.getElementById("size");
 button.addEventListener("click", getPrompt());
 
 function getPrompt() {
-    let number = prompt("Enter a number");
+    let number = prompt("Enter a number between 4 and 64");
     if(number < 4 || number >64){
         alert("Please enter between numbers 4 and 64");
         return;
