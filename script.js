@@ -3,14 +3,12 @@ function createGrid(n){
     for(let i = 0; i < n*n; i++){
         let row = document.createElement("div");
         row.className = "gridsquare";
-        row.setAttribute("onclick", "selected(this)");
+        
         e.appendChild(row);
     }
 }
 
-function selected(e) {
-    e.style.backgroundColor = "black";
-}
+
 
 let n = 16;
 let button = document.getElementById("size");
@@ -32,3 +30,12 @@ cont.style.setProperty('grid-template-columns', 'repeat('+n+', 1fr)');
 
 
 createGrid(n);
+
+let box;
+box = document.getElementsByClassName("gridsquare");
+for ( var i = 0; i < box.length; i++ ) (function(i){
+box[i].onmousemove = function(e) {
+    if(e.buttons == 1)
+		box[i].style.backgroundColor = "black";
+    }
+})(i);
