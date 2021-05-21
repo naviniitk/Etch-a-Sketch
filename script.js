@@ -3,8 +3,13 @@ function createGrid(n){
     for(let i = 0; i < n*n; i++){
         let row = document.createElement("div");
         row.className = "gridsquare";
+        row.setAttribute("onclick", "selected(this)");
         e.appendChild(row);
     }
+}
+
+function selected(e) {
+    e.style.backgroundColor = "black";
 }
 
 let n = 16;
